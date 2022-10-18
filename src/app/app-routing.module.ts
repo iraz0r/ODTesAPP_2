@@ -25,6 +25,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
     canActivate: [IngresadoGuard]
   },
+  {
+    path: 'api',
+    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
+  },
 ];
 
 @NgModule({
